@@ -14,10 +14,25 @@ checkPlainDirectory() {
 }
 
 
+# to check if a plain file exists
+function checkPlainFile {
+    if [ ! -f "/bin/bash" ]; then
+        echo "failed"
+        exit 1
+    fi
+    
+    if [ -f "/bin/doombash" ]; then
+        echo "failed"
+        exit 1
+    fi
+}
+
+
 # to take symbolic link (to directory) into account
 
 run() {
     checkPlainDirectory
+    checkPlainFile
 }
 
 
