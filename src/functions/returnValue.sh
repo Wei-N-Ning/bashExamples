@@ -3,6 +3,8 @@
 
 
 # $1: if not empty, "returns" a string; otherwise return 1
+# usage:
+# ret=$(returnByVarExpansion)
 function returnByVarExpansion {
     if [ -z "$1" ]; then
         return 1
@@ -21,6 +23,9 @@ function returnByVarExpansion {
 # 
 # which is then interpreted once more and ends up setting the caller's 
 # variable.
+# usage:
+# ret=""
+# returnByOutputParam "arg" ret
 function returnByOutputParam {
     if [ -z "$1" ]; then
         return 1
@@ -32,8 +37,22 @@ function returnByOutputParam {
 }
 
 
+# $1: if not empty, append a token to the global string variable 
+# "products"
+# note: how to inspect the exit status of the previous command:
+# https://stackoverflow.com/questions/26675681/bash-how-to-check-the-exit-status-using-an-if-statement
+# return: 0 if $1 is not empty, 1 otherwise
+products=""
+function setGlobalState {
+    if [ -z "$1" ]; then
+        return 1
+    fi
+    products="$products doom"
+    return 0
+}
 
-function run {
+
+function demoReturnByVarExpansion {
     if [ ! "$(returnByVarExpansion)" = "" ]; then
         echo "failed"
         exit 1
@@ -43,7 +62,10 @@ function run {
         echo "failed"
         exit 1
     fi
-    
+}
+
+
+function demoReturnByOutputParam {
     local ret=""
     
     returnByOutputParam "a"
@@ -59,7 +81,26 @@ function run {
         echo "failed"
         exit 1
     fi
+}
+
+
+function demoSetGlobalState {
+    # expected to fail
+    if ! setGlobalState; then
+        return 0
+    fi
     
+    if ! setGlobalState "arg"; then
+        echo "failed"
+        exit 1
+    fi
+}
+
+
+function run {
+    demoReturnByVarExpansion
+    demoReturnByOutputParam
+    demoSetGlobalState
 }
 
 
