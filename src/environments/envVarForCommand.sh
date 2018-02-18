@@ -12,19 +12,18 @@ function reset {
 function createPythonModule {
     local c="import sys;\
 _=sys.stdout.write;\
-[_('*') for i in xrange(18)];\
-_('\n')"
+[_('') for i in xrange(18)];\
+_('')"
     echo $c > /tmp/foobar/patternforfun.py
 }
 
 
 function importPythonModule {
-    local cmd="import patternforfun"
+    local cmd="import patternforfun;assert patternforfun"
     if ! PYTHONPATH=$PYTHONPATH:/tmp/foobar python -c "$cmd"; then
         echo "failed"
         exit 1
     fi
-    echo
 }
 
 
@@ -36,11 +35,21 @@ function verifyPythonPath {
 }
 
 
+function verifyEnvVarInPython {
+    local cmd="import os;assert os.environ['BASHEXAMPLE'] == '1'"
+    if ! BASHEXAMPLE=1 python -c "$cmd"; then
+        echo "failed"
+        exit 1
+    fi
+}
+
+
 function run {
     reset
     createPythonModule
     importPythonModule
     verifyPythonPath
+    verifyEnvVarInPython
 }
 
 
