@@ -7,6 +7,12 @@ function useCurlyBracketsToProtectVariable() {
     local iddqd="invincible"
     assertStringEqual "${idd}qd" "...qd"
     assertStringEqual "$iddqd" "invincible"
+   
+    # pro bash P33 (56)
+    # idd_ is a legit variable name therefore bash tries to expand it 
+    #  rather than expanding idd
+    assertStringEqual "$idd_" ""
+    assertStringEqual "${idd}_" "..._"
 }
 
 function stringLength() {

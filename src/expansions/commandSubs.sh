@@ -2,6 +2,7 @@
 
 # from pro bash
 # recommending: date=$( date ) to date=`date`
+# see also pro bash P35 (58)
 
 # see: http://www.compciv.org/topics/bash/variables-and-substitution/
 # Command substitution allows the output of a command to replace 
