@@ -47,7 +47,7 @@ function setGlobalState {
     if [ -z "$1" ]; then
         return 1
     fi
-    products="$products doom"
+    products="${products} $1" 
     return 0
 }
 
@@ -85,13 +85,19 @@ function demoReturnByOutputParam {
 
 
 function demoSetGlobalState {
-    # expected to fail
     if ! setGlobalState; then
-        return 0
+        echo ""  # expected to fail
     fi
     
     if ! setGlobalState "arg"; then
         echo "failed"
+        exit 1
+    fi
+    setGlobalState "doom"
+    setGlobalState "doom2"
+    if [ "$products" != " arg doom doom2" ]
+    then
+        echo "failed to set global variable: products"
         exit 1
     fi
 }
