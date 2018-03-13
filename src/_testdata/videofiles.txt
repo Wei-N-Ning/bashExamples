@@ -1,0 +1,246 @@
+/home/wein/Videos/:
+cleancoder.com
+CLion
+Cpp
+CppCon
+CPython
+CUDA
+Go
+Kotlin
+Lua
+PyCon
+Rust
+SteamdevLinux
+UncleBob
+VM
+
+/home/wein/Videos/cleancoder.com:
+build_an_app
+iot
+
+/home/wein/Videos/cleancoder.com/build_an_app:
+BAWCH-E1-1080p.mp4
+BAWCH-E2-1080p.mp4
+BAWCH-E3-1080p.mp4
+BAWCH-E4-Eliminating-Duplication-1080p.mp4
+
+/home/wein/Videos/cleancoder.com/iot:
+CleanIOT-E1-1080p.mp4
+CleanIOT-E2-1080p.mp4
+CleanIOT-E3-1080p.mp4
+
+/home/wein/Videos/CLion:
+CLion- A Modern C++ IDE.mp4
+Debugging C-C++ Applications on Linux in CLion- From Basics to Reverse Debug.mp4
+Design Patterns and Modern C++.mp4
+Developing C-C++ Projects with CLion IDE and Conan C-C++ Package Manager.mp4
+
+/home/wein/Videos/Cpp:
+Advanced Python Debugging Techniques Using GDB.mp4
+code--dive 2016 conference – Chandler Carruth – Understanding compiler optimization.mp4
+Collaboration Summit 2013 - Multicore Debugging with GDB.mp4
+GDB Status - GNU Tools Cauldron 2016.mp4
+Getting Started Debugging on Linux (Steam Dev Days 2014).mp4
+How C++ Debuggers work - Simon Brand - Meeting C++ 2017.mp4
+Let's write a Debugger!.mp4
+post_memory_corruption_analysis.mp4
+Three Ways to Debug Parallel CUDA Applications- Interactive, Batch, and Corefile.mp4
+your_application_versus_GDB.mp4
+
+/home/wein/Videos/CppCon:
+20180308_120510.jpg
+'Become a GDB Power User' - Greg Law [ ACCU 2016 ].mp4
+CppCon 2014- Ade Miller 'Writing Data Parallel Algorithms on GPUs'.mp4
+CppCon 2014- Alon Zakai 'Emscripten and asm.js- C++'s role in the modern web'.mp4
+CppCon 2014- Arthur O'Dwyer 'C++11 in the Wild- Techniques from a Real Codebase'.mp4
+CppCon2014- Bill Emshoff 'Using C++ on Mission and Safety Critical Platforms'.mp4
+CppCon 2014- Billy Baker ' Adventures In Updating A Legacy Codebase'.mp4
+CppCon 2014- Bjarne Stroustrup 'Make Simple Tasks Simple!'.mp4
+CppCon 2014- Chad Austin 'Embind and Emscripten- Blending C++11, JavaScript, and the Web Browser'.mp4
+CppCon 2014- Chandler Carruth 'Efficiency with Algorithms, Performance with Data Structures'.mp4
+CppCon 2014- Drew Paroski 'How HHVM Uses Modern C++ for Fun and Profit (Literally)'.mp4
+CppCon 2014- F. Pikus '...Scaling Visualization in concurrent C++ programs'.mp4
+CppCon2014- Hyrum Wright 'Large-Scale Refactoring @ Google'.mp4
+CppCon 2014- James McNellis & Kate Gregory 'Modernizing Legacy C++ Code'.mp4
+CppCon 2014- Jeff Preshing 'How Ubisoft Develops Games for Multicore - Before and After C++11'.mp4
+CppCon 2014- John Lakos 'Defensive Programming Done Right, Part II'.mp4
+CppCon 2014- John Lakos 'Defensive Programming Done Right, Part I'.mp4
+CppCon 2014- Lightning Talks - Lenny Maiorani 'Test-Drive Performance'.mp4
+CppCon 2014- Lightning Talks - Marc Eaddy 'Pimp my Log()'.mp4
+CppCon 2014- Mark Maimone 'C++ on Mars- Incorporating C++ into Mars Rover Flight Software'.mp4
+CppCon 2014- Matt Hargett 'Pragmatic Unit Testing in C++'.mp4
+CppCon 2014- Mike Acton 'Data-Oriented Design and C++' (1).mp4
+CppCon 2014- Mike Acton 'Data-Oriented Design and C++'.mp4.crdownload
+CppCon 2014- M. Juchem 'Meta Techniques- Heterogeneous Polymorphism & Fast Prototyping at Facebook'.mp4
+CppCon 2014- Nicolas Fleury 'C++ in Huge AAA Games'.mp4
+CppCon 2014- Pablo Halpern 'Decomposing a Problem for Parallel Execution'.mp4
+CppCon 2014- Pablo Halpern 'Overview of Parallel Programming in C++'.mp4
+CppCon 2014- T. Grue & S. Kabbes 'A Deep Dive into 2 Cross-Platform Mobile Apps Written in C++'.mp4
+CppCon 2014- Titus Winters 'The Philosophy of Google's C++ Code'.mp4
+CppCon 2014- Zaika Antoun 'Microsoft w- C++ to Deliver Office Across Different Platforms, Part II'.mp4
+CppCon 2014- Zaika Antoun 'Microsoft w- C++ to Deliver Office Across Different Platforms, Part I'.mp4
+CppCon 2015- Ben Deane “Testing Battle.net (before deploying to millions of players)'.mp4
+CppCon 2015- Brett Hall “Transactional Memory in Practice'.mp4
+CppCon 2015- Bryce Adelstein-Lelbach “Benchmarking C++ Code'.mp4
+CppCon 2015- Chandler Carruth 'Tuning C++- Benchmarks, and CPUs, and Compilers! Oh My!'.mp4
+CppCon 2015- Dmitri Nesteruk 'CLion Tips & Tricks'.mp4
+CppCon 2015- Fedor Pikus PART 1 “Live Lock-Free or Deadlock (Practical Lock-free Programming)'.mp4
+CppCon 2015- Fedor Pikus PART 2 “Live Lock-Free or Deadlock (Practical Lock-free Programming) ”.mp4
+CppCon 2015- Greg Law ' Give me 15 minutes & I'll change your view of GDB'.mp4
+CppCon 2015- Jason Turner “The Current State of (free) Static Analysis'.mp4
+CppCon 2015- John Lakos “Value Semantics- It ain't about the syntax!, Part II'.mp4
+CppCon 2015- John Lakos “Value Semantics- It ain't about the syntax!, Part I'.mp4
+CppCon 2015- Kevin P. Fleming “A Crash Course in Open Source Licensing'.mp4
+CppCon 2015- Matt Hargett “Advanced Unit Testing in C & C++”.mp4
+CppCon 2015- Matt P. Dziubinski 'Algorithmic Differentiation- C++ & Extremum Estimation'.mp4
+CppCon 2015- Milian Wolff 'Heaptrack- A Heap Memory Profiler for Linux'.mp4
+CppCon 2015- Neil MacIntosh “Static Analysis and C++- More Than Lint'.mp4
+CppCon 2015- Niall Douglas “Racing The File System'.mp4
+CppCon 2015- Pablo Halpern “Work Stealing'.mp4
+CppCon 2015- Patrik Huber “3D Face Tracking and Reconstruction using Modern C++'.mp4
+CppCon 2015- Pedro Ramalhete “How to make your data structures wait-free for reads'.mp4
+CppCon 2015- Richard Powell “The Importance of Being const'.mp4
+CppCon 2015- Scott Wardle “Memory and C++ debugging at Electronic Arts”.mp4
+CppCon 2015- T. Winters & H. Wright “All Your Tests are Terrible...'.mp4
+CppCon 2015- Vittorio Romeo “Implementation of a component-based entity system in modern C++”.mp4
+CppCon 2016- Alexandru Voicu “Optimally Shooting Furry Balls out of Vulkanoes'.mp4
+CppCon 2016- Alfred Bratterud “#include ＜os＞- from bootloader to REST API with the new C++'.mp4
+CppCon 2016- “Bringing Clang and C++ to GPUs- An Open-Source, CUDA-Compatible GPU C++ Compiler'.mp4
+CppCon 2016- Bryce Adelstein Lelbach “The C++17 Parallel Algorithms Library and Beyond'.mp4
+CppCon 2016- Chandler Carruth “High Performance Code 201- Hybrid Data Structures'.mp4
+CppCon 2016- Cheinan Marks “I Just Wanted a Random Integer!'.mp4
+CppCon 2016- Christiaan Pretorius “Cache Optimized Hash Tables”.mp4
+CppCon 2016- Greg Law “GDB - A Lot More Than You Knew'.mp4
+CppCon 2016- Herb Sutter “Leak-Freedom in C++... By Default.” (1).mp4
+CppCon 2016- Herb Sutter “Leak-Freedom in C++... By Default.”.mp4
+CppCon 2016- “Introduction to C++ python extensions and embedding Python in C++ Apps'.mp4
+CppCon 2016- Jason Jurecka “Game engine using STD C++ 11'.mp4
+CppCon 2016- Jason Turner “Practical Performance Practices'.mp4
+CppCon 2016- Jason Turner “Rich Code for Tiny Computers- A Simple Commodore 64 Game in C++17”.mp4
+CppCon 2016- Mark Isaacson “Developing C++ @ Facebook Scale'.mp4
+CppCon 2016- Nat Goodspeed “Elegant Asynchronous Code'.mp4
+CppCon 2016- Nicholas Ormrod “The strange details of std--string at Facebook'.mp4
+CppCon 2016- Nicolas Fleury “Rainbow Six Siege- Quest for Performance'.mp4
+CppCon 2016- Rian Quinn “Making C++ and the STL Work in the Linux - Windows Kernels'.mp4
+CppCon 2017- Allan Deutsch “Esoteric Data Structures and Where to Find Them”.mp4
+CppCon 2017- Bob Steagall “How to Write a Custom Allocator”.mp4
+CppCon 2017- Bryce Adelstein Lelbach “C++17 Features (part 1 of 2)”.mp4
+CppCon 2017- Bryce Adelstein Lelbach “C++17 Features (part 2 of 2)”.mp4
+CppCon 2017- “C++17 ParallelSTL- A Standardization Experience Report for CPU and GPU on SYCL”.mp4
+CppCon 2017- Chandler Carruth “Going Nowhere Faster”.mp4
+CppCon 2017- Dave Watson “C++ Exceptions and Stack Unwinding”.mp4
+CppCon 2017- David Sankel “So, you inherited a large code base...”.mp4
+CppCon 2017- Dietmar Kühl “C++17 Parallel Algorithms”.mp4
+CppCon 2017- Dmitry Panin “Practical Techniques for Improving C++ Build Times”.mp4
+CppCon 2017- Fedor Pikus “C++ atomics, from basic to advanced.  What do they really do”.mp4
+CppCon 2017- Fedor Pikus “Read, Copy, Update, then what RCU for non-kernel programmers”.mp4
+CppCon 2017- Gennadiy Rozental “How to break an ABI and keep your users happy”.mp4
+CppCon 2017- Gordon Brown “Designing a Unified Interface for Execution”.mp4
+CppCon 2017- Hartmut Kaiser “The Asynchronous C++ Parallel Programming Model”.mp4
+CppCon 2017- Ingve Vormestrand “Tools and Techniques To Stay Up-to-date With Modern C++”.mp4
+CppCon 2017- John Farrier “Performance Benchmarking with Celero”.mp4
+CppCon 2017- John Lakos “Local ('Arena') Memory Allocators (part 1 of 2)”.mp4
+CppCon 2017- John Lakos “Local ('Arena') Memory Allocators (part 2 of 2)”.mp4
+CppCon 2017- Jonathan Henson “Naivety of Creating Cross-Platform, Modern C++ Libraries...”.mp4
+CppCon 2017- Juan Pedro Bolivar Puente “Postmodern immutable data structures”.mp4
+CppCon 2017- Kenny Yu “End-to-end Deadlock Debugging Tools at Facebook”.mp4
+CppCon 2017- Klaus Iglberger “Free Your Functions!”.mp4
+CppCon 2017- Lars Knoll “Qt as a C++ Framework- History, Present State and Future”.mp4
+CppCon 2017- Louis Brandy “Curiously Recurring C++ Bugs at Facebook”.mp4
+CppCon 2017- Marshall Clow “Customizing the Standard Containers”.mp4
+CppCon 2017- Mathieu Ropert “Using Modern CMake Patterns to Enforce a Good Modular Design”.mp4
+CppCon 2017- Matt Kulukundis “Designing a Fast, Efficient, Cache-friendly Hash Table, Step by Step”.mp4
+CppCon 2017- Michael Caisse “Practical Patterns with the Networking TS”.mp4
+CppCon 2017- Michael Spencer “My Little Object File- How Linkers Implement C++”.mp4
+CppCon 2017- Nathan Sidwell “Adding C++ modules-ts to the GNU Compiler”.mp4
+CppCon 2017- Nicholas Ormrod “Fantastic Algorithms and Where To Find Them”.mp4
+CppCon 2017- Nicolas Guillemot “Design Patterns for Low-Level Real-Time Rendering”.mp4
+CppCon 2017- Nicole Mazzuca “Objects, Lifetimes, and References, oh my...”.mp4
+CppCon 2017- Nir Friedman “What C++ developers should know about globals (and the linker)”.mp4
+CppCon 2017- Pablo Halpern “Allocators- The Good Parts”.mp4
+CppCon 2017- Peter Goldsborough “A Tour of Deep Learning With C++”.mp4
+CppCon 2017- Phil Nash “The Holy Grail! A Hash Array Mapped Trie for C++”.mp4
+CppCon 2017- Simon Hausmann “Inside the Qt Object Model”.mp4
+CppCon 2017- Teresa Johnson “ThinLTO- Scalable and Incremental Link-Time Optimization”.mp4
+CppCon 2017- Tony Van Eerd “An Interesting Lock-free Queue - Part 2 of N”.mp4
+SFBACU 20141008 Greg Law - 'Real world reversible debugging for C-C++ developers on Linux'.mp4
+
+/home/wein/Videos/CPython:
+CPython internals and the VM.mp4
+CPython internals - Code objects, function objects, and closures - Lecture 6.mp4
+CPython internals - Example Python data types - Lecture 5.mp4
+CPython internals - Frames, function calls, and scope - Lecture 3.mp4
+CPython internals - Generators - Lecture 9.mp4
+CPython internals - Iterators - Lecture 7.mp4
+CPython internals - Lecture 1.mp4
+CPython internals - Opcodes and main interpreter loop - Lecture 2.mp4
+CPython internals - PyObject- The core Python object - Lecture 4.mp4
+CPython internals - User-defined classes and objects - Lecture 8.mp4
+
+/home/wein/Videos/CUDA:
+Cuda 8 and Beyond.mp4
+cuda_algorithma_design
+CUDA Part A- GPU Architecture Overview and CUDA Basics; Peter Messmer (NVIDIA).mp4
+CUDA Tutorial 6- An Embarrassingly Parallel Algorithm 1.mp4
+GPGPU & CUDA- Using CUDA to do Massively Parallel Array Arithmetic!.mp4
+Lecture 05 GPU Architecture and CUDA Programming.mp4
+Webinar- Essential CUDA Optimization Techniques.mp4
+
+/home/wein/Videos/CUDA/cuda_algorithma_design:
+videoplayback (1).mp4
+videoplayback (2).mp4
+videoplayback (3).mp4
+videoplayback (4).mp4
+videoplayback (5).mp4
+videoplayback.mp4
+
+/home/wein/Videos/Go:
+Google I-O 2012 - Go Concurrency Patterns.mp4
+GopherCon 2016- Rob Pike - The Design of the Go Assembler.mp4
+Gopherfest 2017- Upspin (Rob Pike).mp4
+''go test -race' Under the Hood' by Kavya Joshi.mp4
+Lexical Scanning in Go - Rob Pike.mp4
+
+/home/wein/Videos/Kotlin:
+Introduction to Kotlin (Google I-O '17).mp4
+The Three Laws of TDD (Featuring Kotlin).mp4
+
+/home/wein/Videos/Lua:
+The price of speed- Lua or LuaJIT Etiene Dalcol - London Lua August 2017.mp4
+Vyacheslav Egorov @ VMSS16- What I learned from LuaJIT.mp4
+
+/home/wein/Videos/PyCon:
+Debugging Hung Python Processes With GDB by John Schwarz.mp4
+'Dude, Where's My RAM' — A deep dive into how Python uses memory.mp4
+Joe Jevnik - How to Write and Debug C Extension Modules - PyCon 2017.mp4
+Programming 'brainfuck' and virtual machines - Aur Saraf - Pycon Israel 2017.mp4
+PyCon2010_The_Mighty_Dictionary.mp4
+PyCon PL 2016-Roman Podoliaka 'Debugging of CPython processes with gdb'.mp4
+PyCon UK 2012- Create beautiful command-line interfaces with Python.mp4
+Scott Sanderson, Joe Jevnik - Playing with Python Bytecode - PyCon 2016.mp4
+
+/home/wein/Videos/Rust:
+Donald Whyte - Testing in Rust.mp4
+Dzmitry Malyshau, Markus Siglreithmaier - Portable graphics abstraction in Rust.mp4
+Emily Dunham - Keynote- Spreading The Rust.mp4
+Fletcher Nichol - Taking Rust to Production- Lessons Learned From the Habitat Project.mp4
+GOTO 2017 • Why is Rust Successful • Florian Gilcher.mp4
+Nikita Baksalyar - Demystifying Rust Parsing.mp4
+Rust Berlin October 2017 - Application containers for IoT and BDD in Rust.mp4
+RustConf 2017 - Closing Keynote- Safe Systems Software and the Future of Computing by Joe Duffy.mp4
+RustConf 2017 - Improving Rust Performance Through Profiling and Benchmarking by Steve Jenson.mp4
+Rust Programming Techniques.mp4
+Zeeshan Ali - Rust Memory Management.mp4
+
+/home/wein/Videos/SteamdevLinux:
+Beyond Porting- How Modern OpenGL Can Radically Reduce Driver Overhead (Steam Dev Days 2014).mp4
+Game Development with SDL 2.0 (Steam Dev Days 2014).mp4
+Getting Started with Linux Game Development (Steam Dev Days 2014).mp4
+Moving Your Games to OpenGL (Steam Dev Days 2014).mp4
+
+/home/wein/Videos/UncleBob:
+'Uncle' Bob Martin - 'The Future of Programming'.mp4
+
+/home/wein/Videos/VM:
+How to Build a Virtual Machine.mp4
+videoplayback (1).mp4

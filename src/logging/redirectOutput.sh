@@ -14,3 +14,7 @@ stdbuf -oL python -c "import time,sys;[(time.sleep(0.1), sys.stdout.write('XXAA\
 
 # csh version (can't run it here)
 # .... >& /tmp/log.txt
+
+var=$( python -c "import sys;sys.stdout.write('doom_out');sys.stderr.write('doom_err')" 2>&1 )
+# DO NOT expect the order to be doom_outdoom_err
+echo $var
