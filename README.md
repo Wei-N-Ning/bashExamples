@@ -146,6 +146,9 @@
 
 - takingFourteenArguments
 - takingThreeArguments
+- shiftArguments
+- forEachArgument
+- whileEachArgument
 
 
 [logic/numericLoop.sh](src/logic/numericLoop.sh)
@@ -178,6 +181,28 @@
 - twoBranches
 - prt
 - combine
+
+
+[strings_/manip.sh](src/strings_/manip.sh)
+
+- join
+- joins
+- len
+- stripSuffix
+- stripPrefix
+- replace
+- sub
+- toUpper
+- toLower
+
+
+[strings_/parameterExpansion.sh](src/strings_/parameterExpansion.sh)
+
+- defaultValueIfEmptyOrUnset
+- defaultValueIfUnset
+- alternativeValueIfSetAndNotEmpty
+- alternativeValueIfSet
+- requireVarIsSet
 
 
 [strings_/cutColumns.sh](src/strings_/cutColumns.sh)
