@@ -55,6 +55,10 @@ function len() {
 # can be used to replace external command dirname
 function stripSuffix() {
     local texName="/doom/e1/m1/textures/platform.dds"
+
+    # dirname (see stripPrefix for an implementation of basename function)
+    assertStrEqual "/doom/e1/m1/textures" ${texName%/*}
+
     assertStrEqual "/doom/e1/m1/textures/platform" ${texName%.dds}
     assertStrEqual "/doom/e1/m1/" ${texName%tex*}
 
@@ -67,6 +71,9 @@ function stripSuffix() {
 
 function stripPrefix() {
     local modelName="/doom2/e15/resources/models/imp.mdl"
+
+    # basename
+    assertStrEqual "imp.mdl" ${modelName##*/}
 
     # NOTE: shortest match
     assertStrEqual "2/e15/resources/models/imp.mdl" ${modelName#*m}
