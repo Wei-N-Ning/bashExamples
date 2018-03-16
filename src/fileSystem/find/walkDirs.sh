@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function walk() {
-    find ${1} -type f \
+    find $1 -type f \
     -not -path "*git/*" \
     -not -path "*_testdata/*" \
     -name "*.sh" | xargs awk '
@@ -20,12 +20,12 @@ FNR == 1 {
 }
 
 function run() {
-    walk
+    walk $1
 }
 
-if [ ${1} == "" ]
+if [ "$1" == "" ]
 then
     echo "require directory path"
     exit 1
 fi
-run
+run $1
