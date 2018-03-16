@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # logic-and
 if [ "1" = "1" ] && [ "2" = "2" ]; then
