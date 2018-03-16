@@ -1,19 +1,19 @@
 
 
-[variables/localVariables.sh](src/variables/localVariables.sh)
+[/](src//)
 
 
 
-[variables/defaultValue.sh](src/variables/defaultValue.sh)
+[/](src//)
 
 - printProductName
 
 
-[variables/integerTests.sh](src/variables/integerTests.sh)
+[/](src//)
 
 
 
-[logging/printing.sh](src/logging/printing.sh)
+[/](src//)
 
 - callPrintf
 - printInColumns
@@ -21,118 +21,118 @@
 - parseWhitespaces
 
 
-[logging/redirectOutput.sh](src/logging/redirectOutput.sh)
+[/](src//)
 
 
 
-[terminal_/fontColor.sh](src/terminal_/fontColor.sh)
+[/](src//)
 
 - printInColor
 
 
-[execution/checkExitStatus.sh](src/execution/checkExitStatus.sh)
+[/](src//)
 
 - echoExitStatus
 
 
-[execution/multiLineStatement.sh](src/execution/multiLineStatement.sh)
+[/](src//)
 
 
 
-[execution/callOtherCommands.sh](src/execution/callOtherCommands.sh)
+[/](src//)
 
 
 
-[execution/multiCommandOneliner.sh](src/execution/multiCommandOneliner.sh)
+[/](src//)
 
 - multipleCommandsInOneLine
 
 
-[processes/childProcess.sh](src/processes/childProcess.sh)
+[/](src//)
 
 - createPythonProgram
 - launchChild
 - shutdownChild
 
 
-[processes/findProcessBeacon.sh](src/processes/findProcessBeacon.sh)
+[/](src//)
 
 - dothis
 
 
-[processes/processGrep.sh](src/processes/processGrep.sh)
+[/](src//)
 
 - searchForProcess
 
 
-[expansions/commandSubs.sh](src/expansions/commandSubs.sh)
+[/](src//)
 
 - commandExpansionUsingCustomIFS
 - commandExpansionUsingDefaultIFS
 
 
-[expansions/arithmeticExpansion.sh](src/expansions/arithmeticExpansion.sh)
+[/](src//)
 
 
 
-[expansions/processSubs.sh](src/expansions/processSubs.sh)
+[/](src//)
 
 
 
-[expansions/variableExpansion.sh](src/expansions/variableExpansion.sh)
+[/](src//)
 
 - useCurlyBracketsToProtectVariable
 - stringLength
 - findAndReplace
 
 
-[expansions/pathnameExpansion.sh](src/expansions/pathnameExpansion.sh)
+[/](src//)
 
 - globFiles
 
 
-[codeStyle/style_v1.sh](src/codeStyle/style_v1.sh)
+[/](src//)
 
 
 
-[streams_/stdInOutErr.sh](src/streams_/stdInOutErr.sh)
+[/](src//)
 
 - redirectionStdOutAndErrSeparately
 - redirectionStdOutAndErrToOneFile
 - redirectStdInFromFile
 
 
-[streams_/readToVars.sh](src/streams_/readToVars.sh)
+[/](src//)
 
 - readLineToVars
 
 
-[fileSystem/fileTestExpressions.sh](src/fileSystem/fileTestExpressions.sh)
+[/](src//)
 
 - fileIsSymbolicLink
 - fileIsExecutable
 
 
-[fileSystem/checkExistence.sh](src/fileSystem/checkExistence.sh)
+[/](src//)
 
 - checkPlainFile
 
 
-[fileSystem/forEachFile.sh](src/fileSystem/forEachFile.sh)
+[/](src//)
 
 
 
-[fileSystem/find](src/fileSystem/find)
+[/](src//)
 
 - walk
 
 
-[fileSystem/find](src/fileSystem/find)
+[/](src//)
 
 - findDirectories
 
 
-[functions/returnValue.sh](src/functions/returnValue.sh)
+[/](src//)
 
 - returnByVarExpansion
 - returnByOutputParam
@@ -142,74 +142,74 @@
 - demoSetGlobalState
 
 
-[functions/arguments.sh](src/functions/arguments.sh)
+[/](src//)
 
 - takingFourteenArguments
 - takingThreeArguments
 
 
-[logic/numericLoop.sh](src/logic/numericLoop.sh)
+[/](src//)
 
 - iterateOverNumbers
 
 
-[logic/itemLoop.sh](src/logic/itemLoop.sh)
+[/](src//)
 
 - iterateOverFilePaths
 
 
-[logic/forLoops.sh](src/logic/forLoops.sh)
+[/](src//)
 
 - doubleGrep
 - useAwkArray
 
 
-[logic/whileLoops.sh](src/logic/whileLoops.sh)
+[/](src//)
 
 - readLinesFromFile
 
 
-[logic/booleans.sh](src/logic/booleans.sh)
+[/](src//)
 
 
 
-[logic/conditionals.sh](src/logic/conditionals.sh)
+[/](src//)
 
 - twoBranches
 - prt
 - combine
 
 
-[strings_/cutColumns.sh](src/strings_/cutColumns.sh)
+[/](src//)
 
 - cutColumns
 
 
-[strings_/singleDoubleQuotes.sh](src/strings_/singleDoubleQuotes.sh)
+[/](src//)
 
 - singleQuoteSubstitution
 - doubleQuoteSubstitution
 
 
-[strings_/wordSplitting.sh](src/strings_/wordSplitting.sh)
+[/](src//)
 
 - printArgs
 - demoDefaultIFS
 - demoCustomIFS
 
 
-[strings_/stringTests.sh](src/strings_/stringTests.sh)
+[/](src//)
 
 - stringContains
 - stringIsDigit
 - enoughArguments
 
 
-[xargs/trickyFilePaths.sh](src/xargs/trickyFilePaths.sh)
+[/](src//)
 
 
 
-[pipelines/fifoMessagePassing.sh](src/pipelines/fifoMessagePassing.sh)
+[/](src//)
 
 - _free
 - _init
@@ -217,12 +217,12 @@
 - main
 
 
-[pipelines/printToTee.sh](src/pipelines/printToTee.sh)
+[/](src//)
 
 - writeToTee
 
 
-[pipelines/fifoControl.sh](src/pipelines/fifoControl.sh)
+[/](src//)
 
 - _free
 - _init
@@ -230,45 +230,45 @@
 - demoBashWaitForPython
 
 
-[pipelines/teeToMultipleOutputs.sh](src/pipelines/teeToMultipleOutputs.sh)
+[/](src//)
 
 - createExec
 
 
-[dateAndTime/getDateTime.sh](src/dateAndTime/getDateTime.sh)
+[/](src//)
 
 - formatDateAndTime
 
 
-[shellPipe/read_stdin.sh](src/shellPipe/read_stdin.sh)
+[/](src//)
 
 - generateSUT
 
 
-[applications/lineCounter.sh](src/applications/lineCounter.sh)
+[/](src//)
 
 
 
-[applications/lineCounter_test.sh](src/applications/lineCounter_test.sh)
+[/](src//)
 
 
 
-[environments/shellType.sh](src/environments/shellType.sh)
+[/](src//)
 
 
 
-[environments/checkCommandExistence.sh](src/environments/checkCommandExistence.sh)
+[/](src//)
 
 
 
-[environments/getRunningScriptPID.sh](src/environments/getRunningScriptPID.sh)
+[/](src//)
 
 - getCurrentPID
 - getCurrentPIDPython
 - getBackgroundProcessPID
 
 
-[environments/envVarForCommand.sh](src/environments/envVarForCommand.sh)
+[/](src//)
 
 - reset
 - createPythonModule
@@ -277,11 +277,15 @@
 - verifyEnvVarInPython
 
 
-[environments/getRunningScriptPath.sh](src/environments/getRunningScriptPath.sh)
+[/](src//)
 
 - getScriptPath
 
 
-[regexp/conditionalGroup.sh](src/regexp/conditionalGroup.sh)
+[/](src//)
 
 - ifElseGroup
+
+
+[/](src//)
+
