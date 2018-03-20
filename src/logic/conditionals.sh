@@ -15,6 +15,20 @@ function prt() {
     printf "< $1 >\n"
 }
 
+function logicalOR() {
+    if [[ "$1" == "" || "$2" == "" ]]
+    then
+        echo "missing arg (require two non-empty string args)"
+    fi
+}
+
+function logicalAND() {
+    if [[ "$1" == "" && "$2" == "" ]]
+    then
+        echo "missing args (both args are empty)"
+    fi
+}
+
 function combine() {
     # this still returns 1
     test -d "/tmp1" && prt "/tmp1"
@@ -40,6 +54,8 @@ function combine() {
 function run() {
     twoBranches
     combine
+    logicalOR
+    logicalAND
 }
 
 run
