@@ -29,9 +29,9 @@ function launchChild() {
 
 function shutdownChild() {
     local child=$!
-    echo $child
-    kill -s SIGINT $child
-    wait $child &> /dev/null
+    echo ${child}
+    kill -s SIGINT ${child}
+    wait ${child} &> /dev/null
     assertNotEqual 0 $?
 }
 
