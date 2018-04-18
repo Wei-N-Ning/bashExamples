@@ -13,8 +13,15 @@ function takingFourteenArguments() {
 # see pro bash P8
 function takingThreeArguments() {
     # expand to the value of all the positional arguments combined
-    echo $*
-    echo $@
+    echo "(format 1) number of arguments: " $# $*
+    echo "(format 2) number of arguments: " $# $@
+    echo "(format 3) number of arguments: " ${#} ${@}
+    local result=""
+    for s in ${@}
+    do
+        result="${result}${s}"
+    done
+    echo ${result}
 }
 
 # can be used to implement a better string-joiner function
