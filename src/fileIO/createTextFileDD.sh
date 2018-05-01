@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # create a descent-sized text file (most likely for testing purpose)
+# dd can be also used to profile disk IO throughput
 
 sutOut="/tmp/_"
 
