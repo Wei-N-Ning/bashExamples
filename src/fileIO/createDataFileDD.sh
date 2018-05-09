@@ -5,9 +5,9 @@
 
 sutOut="/tmp/_"
 
-function create() {
-    dd if=/dev/zero of=${sutOut} bs=1K count=1K
+function createFileWithRandomBytes() {
+    dd if=/dev/urandom of=${sutOut} bs=1K count=1K
     ls -l ${sutOut}
 }
 
-create
+createFileWithRandomBytes

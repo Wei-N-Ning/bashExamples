@@ -124,6 +124,16 @@ function toLower() {
     assertStrEqual "e1m1" ${mapName,,}
 }
 
+function sortAndUnique() {
+    echo "
+doom
+doom2
+doom
+
+doom3
+" | sort -u
+}
+
 function run() {
     join
     local s=$( joins "-" {a..f} )
@@ -135,6 +145,7 @@ function run() {
     sub
     toUpper
     toLower
+    sortAndUnique
 }
 
 run
