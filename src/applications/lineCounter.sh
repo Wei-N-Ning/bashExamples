@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# see arithmetics and fileSystem/find for an implementation based on find program
+
 count() {
     echo
 }
