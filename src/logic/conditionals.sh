@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# UPDATE:
+# 
+# this oneliner trick works for all shell type (sh, csh, bash...)
+# 
+# test $_condition_ && $_expr_
+# for example, to test whether a directory is created:
+# test -d /tmp/sut && echo "pass"
+
 function twoBranches() {
     if [ ! -z "$HOMED" ]; then
         printf "HOMED is set\n"
