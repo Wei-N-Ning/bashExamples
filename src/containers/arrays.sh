@@ -40,6 +40,30 @@ createAssociatedArray() {
     echo ${arr[*]}
 }
 
+checkArraySize() {
+    arr=(1 2 3 4)
+    local sz=${#arr[*]}
+    echo ${#arr[*]}
+}
+
+appendToArray() {
+    arr=(1 2 3 4)
+    local sz=${#arr[*]}
+    echo -n ${#arr[*]}","
+
+    # append
+    arr[sz]=100
+    echo ${#arr[*]}
+    echo "${arr[*]}"
+
+    # remove the newly appended element
+    unset arr[sz]
+    echo ${#arr[*]}
+    echo "${arr[*]}"
+}
+
 setUp
 createPlainArray
 createAssociatedArray
+checkArraySize
+appendToArray
