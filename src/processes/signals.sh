@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# note:
+# man signal
+# sigaction is recommended over signal
+# see also:
+# networkFoo/csockets/tests//chapter1
+# howToVerify.sh
+
 function runReceiver() {
     python -c "from __future__ import print_function
 import signal, time
