@@ -7,4 +7,11 @@ function fileInfo() {
     file /tmp/_
 }
 
+isSymlink() {
+    touch /tmp/a && rm -f /tmp/b
+    ln -s /tmp/a /tmp/b
+    [[ -L /tmp/b ]] && echo "is symbolic link"
+}
+
 fileInfo
+isSymlink
