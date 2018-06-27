@@ -51,6 +51,36 @@ function whileEachArgument() {
     printf "%s\n" ${result}
 }
 
+# source:
+# stackoverflow
+# getting the last argument passed to a shell script
+useLastArgument() {
+    # bash only
+    echo "last-arg: ${@: -1}"
+    
+    # portable
+    for last; do true; done
+    echo "last-arg: $last"
+}
+
+test_useLastArgument() {
+    useLastArgument
+    useLastArgument doom doom2 dune2 
+}
+
+# source:
+# stackoverflow
+# remove last argument form argument list of shell script
+removeLastArgument() {
+    set -- "${@:1:$(($#-1))}"
+    echo "all-args: $@"
+}
+
+test_removeLastArgument() {
+    removeLastArgument
+    removeLastArgument doom doom2 dune2
+}
+
 function run() {
     takingFourteenArguments 1x 2x 3x 4x 5x 6x 7x 8x 9x 10x 11x 12x 13x 14x 
     takingThreeArguments 1a
@@ -59,6 +89,9 @@ function run() {
     shiftArguments " - " {a..h}
     forEachArgument {1..10}
     whileEachArgument {1..10}
+
+    test_useLastArgument
+    test_removeLastArgument
 }
 
 
