@@ -3,11 +3,16 @@
 # source
 # https://en.wikipedia.org/wiki/Here_document
 
+# to allow substituteion use << EOF 
+# to disallow substitution use << "EOF"
+password="thereis acow"
+
 heredoc_variable() {
     local text=$( cat << EOF
 new line
 another line
 third line!
+${password}
 EOF
 )
     # note the newline characters are removed
@@ -21,6 +26,7 @@ if (/doom/) {
     $start++;
 }
 if ($start || 0) {
+    print "\${password}";
     print $_;
 }
 EOF
