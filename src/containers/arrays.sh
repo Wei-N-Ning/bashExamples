@@ -11,6 +11,32 @@ setUp() {
     mkdir /tmp/sut
 }
 
+# this example use bash-specific syntax (requiring modern bash version)
+# source:
+# https://unix.stackexchange.com/questions/132102/communication-between-multiple-processes
+
+bashArray() {
+
+    # prefer local array variable
+    local array=()
+    for fn in $( ls /tmp )
+    do
+        # /// IMPORTANT ///
+        # () is required to keep each element separate;
+        # otherwise they are merged into one big string
+        array+=( ${fn} )
+    done
+
+    # /// note the for-loop syntax ///
+    for fn in "${array[@]}"
+    do
+        echo "bash array demo: ${fn}"
+    done
+}
+
+# array is a local variable
+echo "^^^^^ ${array[@]}"
+
 createPlainArray() {
     arr=(s 2 i 4 n 2)
     echo ${arr[*]}
@@ -63,6 +89,7 @@ appendToArray() {
 }
 
 setUp
+bashArray
 createPlainArray
 createAssociatedArray
 checkArraySize

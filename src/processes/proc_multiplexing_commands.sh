@@ -2,45 +2,41 @@
 
 # source
 # https://unix.stackexchange.com/questions/132102/communication-between-multiple-processes
-# keyword:
-# multiplexing
 
-manager() {
-    while IFS= read -r line; do
-        echo "manager[$1:$BASHPID]: $line"
-    done
-}
+# /////// keyword: multiplexing ////////
+
+# usage:
+# this program controls a child Python program by issuing it commands 
+# in integers
 
 mkdir -p /tmp/sut
 cat >/tmp/sut/worker.py <<"EOF"
 #!/usr/bin/env python
 import sys, os
+
+def step(arg):
+    print('executing: {}'.format(arg))
+
 for l in sys.stdin:
-    if l.startswith('END'):
+    l = l.strip()
+    if l == 'END':
         sys.exit(0)
-    print('worker({}): {}'.format(os.getpid(), l))
+    step(int(l))
 EOF
 chmod 777 /tmp/sut/worker.py
 
-fds=()
+child_fd=
 for (( i=0; i<5; i++ )); do
-
-    # original example
-    # exec {fd}> >(manager $i)
-
     exec {fd}> >( /tmp/sut/worker.py )
-
-    fds+=( $fd )
+    child_fd=( ${fd} )
 done
 
 while IFS= read -r line; do
-    echo "master: $line"
-    for fd in "${fds[@]}"; do
-        printf -- '%s\n' "$line" >&$fd
-    done
+    printf -- '%s\n' "${line}" >&$fd
     if [[ ${line} == "END" ]]
     then
         wait
         exit 0
     fi
 done
+
