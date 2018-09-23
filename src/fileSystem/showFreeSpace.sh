@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 function run {
-    df -BM -h
+    # df -BM -h
+    
+    # human readable
+    df -ah
 }
 
 run
