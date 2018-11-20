@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 #~ https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 #~ You can use these ANSI escape codes:
