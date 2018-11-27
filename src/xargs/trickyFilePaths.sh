@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function run() {
+function __run() {
     awk -v keyword="rust" '
 BEGIN {IGNORECASE = 1}
 {
@@ -9,6 +9,10 @@ BEGIN {IGNORECASE = 1}
     }
 }
 ' ../_testdata/videofiles.txt
+}
+
+function run() {
+    cat ../_testdata/videofiles.txt | perl -ne '/[Rr]+ust/ && print'
 }
 
 run
