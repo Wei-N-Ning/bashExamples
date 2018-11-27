@@ -54,6 +54,7 @@ EOF
 }
 
 verify() {
+    unzip -l ${INST_FILENAME}
     ${INST_FILENAME}
     md5sum ${SUT_FILENAME} ${TEMPDIR}/output/sut.bin
 }
