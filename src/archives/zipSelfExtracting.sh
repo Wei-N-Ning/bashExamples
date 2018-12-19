@@ -3,6 +3,7 @@
 # source
 # the main inspiration is the installer of bazel, take a look at its content in vim
 #
+
 # here is a project that promotes this technique to the public domain:
 # https://github.com/megastep/makeself
 # https://makeself.io/
@@ -13,6 +14,16 @@
 # https://www.linuxjournal.com/node/1005818
 # https://stackoverflow.com/questions/955460/how-do-linux-binary-installers-bin-sh-work
 # https://stackoverflow.com/questions/20758981/self-extracting-script-in-sh-shell
+
+# QUESTIONS:
+
+# the installer I created below throws a warning:
+# warning extra bytes at beginning or within zipfile
+# however the bazel's one does not;
+
+# How does unzip identify the begin of the zip archive?
+# where is the source code of the unzip program?
+
 
 TEMPDIR=/tmp/sut
 
@@ -44,7 +55,7 @@ createInstaller() {
 set -e
 dest=/tmp/sut/output
 mkdir ${dest}
-cd ${dest} && unzip ${0} -d ${dest}
+cd ${dest} && unzip -q ${0} -d ${dest}
 
 exit 0
 ######## the end ########
