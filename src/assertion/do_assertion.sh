@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+function printInColor() {
+    local RED='\033[0;31m'
+    local NC='\033[0m' # No Color
+    printf "${RED}${1}${NC}\n"
+}
+
 # $1: ret code
 # $2: line number $LINENO
 # $3: optional message
@@ -11,10 +17,10 @@ assert() {
         local absfilename="$( pwd )/${BASH_SOURCE[0]}"
         local _range=$( python -c \
             "s=${ln}-${n};e=${ln}+${n};r=(s if s>0 else 0, e);print('{},{}p'.format(*r))" )
-        echo "//// assert() error ////"
+        printInColor "//// assert() error ////"
         if [[ "$3" != "" ]]
         then
-            echo "$3"
+            printInColor "$3"
         fi
         echo "${absfilename}, line:$2"
         sed -n ${_range} ${absfilename}
