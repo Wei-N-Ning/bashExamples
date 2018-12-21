@@ -1,9 +1,5 @@
 
 
-[bashExamples/upload.sh](src/bashExamples/upload.sh)
-
-
-
 [bashExamples/src](src/bashExamples/src)
 
 
