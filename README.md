@@ -1,61 +1,61 @@
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - ifElseGroup
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - createMd5hashFromFile
 - createMd5hashFromString
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - genSha1HashFromFile
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - createFileWithRandomBytes
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - printInColor
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - generateSUT
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - setUp
 - tearDown
@@ -63,17 +63,17 @@
 - pipeScriptToFile
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - countMatchingLines
 - countUnmatchingLines
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - join
 - joins
@@ -87,36 +87,36 @@
 - sortAndUnique
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - cutColumns
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - singleQuoteSubstitution
 - doubleQuoteSubstitution
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - printArgs
 - demoDefaultIFS
 - demoCustomIFS
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - stringContains
 - stringIsDigit
 - enoughArguments
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - defaultValueIfEmptyOrUnset
 - defaultValueIfUnset
@@ -127,41 +127,41 @@
 - getVariableLength
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - show
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - getScriptPath
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - reset
 - createPythonModule
@@ -170,103 +170,103 @@
 - verifyEnvVarInPython
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - getCurrentPID
 - getCurrentPIDPython
 - getBackgroundProcessPID
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - formatDateAndTime
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - createPythonProgram
 - launchChild
 - shutdownChild
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - listChildProcesses
 - printParentPid
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - searchForProcess
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - listPidsByProgramName
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - dothis
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - twoBranches
 - prt
@@ -275,57 +275,57 @@
 - combine
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - iterateOverFilePaths
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - createDirIfNotExist
 - compoundConditions
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - readLinesFromFile
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - doubleGrep
 - useAwkArray
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - iterateOverNumbers
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - createFromJPGs
 - doPDFShrink
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - createExec
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - _free
 - _init
@@ -333,7 +333,7 @@
 - main
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - _free
 - _init
@@ -341,41 +341,41 @@
 - demoBashWaitForPython
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - writeToTee
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - checkPlainFile
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - setUp
 - buildSUTProgram
@@ -385,77 +385,77 @@
 - tearDown
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - getAbsolutePath
 - getAbsolutePathByVar
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - walk
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - findDirectories
 - createFindPatterns
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - fileInfo
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - fileIsSymbolicLink
 - fileIsExecutable
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - compressSingleFile
 - compressMultipleFilesSeparately
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - setUp
 - tearDown
@@ -463,100 +463,100 @@
 - decompressDirectory
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - printProductName
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - validate
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - echoExitStatus
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - setUp
 - build
 - verifyBuild
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - multipleCommandsInOneLine
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - implicitCast
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - __run
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - returnByVarExpansion
 - returnByOutputParam
@@ -566,7 +566,7 @@
 - demoSetGlobalState
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - takingFourteenArguments
 - takingThreeArguments
@@ -575,61 +575,61 @@
 - whileEachArgument
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - globFiles
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - useCurlyBracketsToProtectVariable
 - stringLength
 - findAndReplace
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - commandExpansionUsingCustomIFS
 - commandExpansionUsingDefaultIFS
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - redirectionStdOutAndErrSeparately
 - redirectionStdOutAndErrToOneFile
 - redirectStdInFromFile
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - readLineToVars
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 - callPrintf
 - printInColumns
@@ -637,17 +637,17 @@
 - parseWhitespaces
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
 
 
-[bashExamples/src](src/bashExamples/src)
+[/](src//)
 
