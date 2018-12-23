@@ -50,21 +50,37 @@ createPlainArray() {
     unset arr
 }
 
+# mac os does not have realpath command
+# $1: a partial path
+get_abspath() {
+    local _dir=$( pwd )
+    echo "${_dir}/${1}"
+}
+
+# associated array can be used to implement set or dict
+# to experiment:
+# change arr[${n}]=${pp} to
+#        arr[${n}]=${n}
+# see maps.sh for complete example of dict
 createAssociatedArray() {
     declare -A arr
     local n=
     for p in $( find .. -name "a*.sh" -type f )
     do
         n=$( basename ${p} )
-        arr[${n}]=${n}
+        pp=$( get_abspath ${p} )
+        arr[${n}]=${pp}
 
         # deliberately attempt to duplicate the
         # elements to test whether this array
         # acts like a set
-        arr[${n}]=${n}
+        arr[${n}]=${pp}
     done
     echo ${arr[*]}
 }
+
+# array declared inside subroutine is a local array
+echo "arr is a local array, verify: " ${arr[*]}
 
 checkArraySize() {
     arr=(1 2 3 4)

@@ -13,14 +13,14 @@
 #~ Light Gray   0;37     White         1;37
 
 #~ And then use them like this in your script:
-function printInColor() {
+function printInRed() {
     local RED='\033[0;31m'
     local NC='\033[0m' # No Color
     printf "I ${RED}love${NC} Stack Overflow\n"
 }
 
 function run() {
-    printInColor
+    printInRed
 }
 
 run

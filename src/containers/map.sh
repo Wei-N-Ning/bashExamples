@@ -23,6 +23,21 @@ set_get_in_map() {
         echo "key=${key}, value=${files[${key}]}"
         echo "${key}: ${files[${key}]}"
     done
+    
+    # key exists
+    echo "not null: ${files[app]}"
+
+    # key does not exist
+    echo "null: ${files[application]}"
+
+    # raises an error (which may terminate the script) 
+    ( echo "null: ${files[application]:?key does not exist}" )
+    echo $?
+
+    # use default value if key does not exist
+    # in some cases it can be an empty string
+    echo "default: ${files[application]:-empty}"
+
 }
 
 set_get_in_map
