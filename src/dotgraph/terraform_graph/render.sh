@@ -10,6 +10,9 @@
 # ranksep = 4.0 
 # this way the resulting png is more readable. 
 
+# the open command only works on mac:
+# https://apple.stackexchange.com/questions/299900/how-to-open-an-image-file-from-bash-in-mac
+
 thisdir=$( dirname ${BASH_SOURCE[0]} )
 
 do_render() {
