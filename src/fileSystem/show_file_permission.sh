@@ -25,7 +25,7 @@ get_perm() {
 test_get_perm() {
     get_perm /tmp
     local f=/tmp/__readonly && touch ${f} && chmod 400 ${f} && \
-        get_perm ${f} && rm ${f}
+        get_perm ${f} && rm -f ${f}
     get_perm /dev
 
     # throws an error on non existing file 
