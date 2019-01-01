@@ -26,7 +26,7 @@ local filename=${1:?"missing filename"}
 python - ${filename} <<"EOF"
 import os
 import sys
-print(os.path.realpath(sys.argv[1]))
+print(":", os.path.realpath(sys.argv[1]))
 EOF
 }
 fi
