@@ -8,6 +8,8 @@
 # nohup: to prevent the process from terminating when the 
 # calling user logs out 
 
+# busybox: shipped with ubuntu by default
+
 experiment() {
     # log into a U18 vm (I used vagrant + vbox)
 
