@@ -32,4 +32,8 @@ EOF
 fi
 
 run
+
+# verify:
+# on Ubuntu, this shows "/.../.../asd"
+# on mac os, this shows (":", "/.../.../asd")
 realpath "asd"
