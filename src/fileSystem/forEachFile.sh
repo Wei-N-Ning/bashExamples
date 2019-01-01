@@ -2,12 +2,14 @@
 
 shopt -s globstar
 
+thisdir=$( dirname ${BASH_SOURCE[0]} )
+
 loopThroughFilesInDirectoryRecursive() {
-    for f in "/work/dev/python/github.com/powergun/codingMatrix"/**/*.py
+    for f in "${thisdir}/../../"/**/*.sh
     do
         # example: execute each Python file 
         # /usr/bin/env python $f
-        echo $f
+        echo ${f}
     done
 }
 

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# motivation
+# to set some temporary environment variables before executing
+# a command; those variables cease to exist once the command
+# terminates
+# I may use export var=value to make sure these variables get
+# picked by the subprocess
 
 function reset {
     if [ -d /tmp/foobar ]; then

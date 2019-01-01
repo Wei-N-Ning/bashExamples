@@ -3,7 +3,7 @@
 # $1: (optional) an existing env dump; if not provide it will dump the current shell environment
 function run() {
     local envFile=${1}
-    if [ "${envFile}" == "" ]
+    if [[ "${envFile}" == "" ]]
     then
         env > /tmp/_
         envFile=/tmp/_
@@ -13,7 +13,7 @@ BEGIN {
     FS="="
 }
 {
-    print $1 "=" "\"" $2 "\""
+    print "export " $1 "=" "\"" $2 "\""
 }
 ' ${envFile}
 }
