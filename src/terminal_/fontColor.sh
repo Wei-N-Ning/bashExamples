@@ -13,14 +13,19 @@
 #~ Light Gray   0;37     White         1;37
 
 #~ And then use them like this in your script:
-function printInRed() {
-    local RED='\033[0;31m'
+function printInColor() {
+    declare -A colorByName=(
+        [red]='\033[0;31m' 
+        # no color
+        [nc]='\033[0m' 
+    )
+    local C=${colorByName[${1:?"missing color name"}]}
     local NC='\033[0m' # No Color
-    printf "I ${RED}love${NC} Stack Overflow\n"
+    printf "Bad ${C}Blood${NC}: Sins and Lies\n"
 }
 
 function run() {
-    printInRed
+    printInColor 'red'
 }
 
 run
