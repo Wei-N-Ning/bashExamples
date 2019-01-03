@@ -11,6 +11,17 @@ setUp() {
     mkdir /tmp/sut
 }
 
+define_trivial_array() {
+    local args=( aaa bb )
+    args+=( ccc )
+    for ch in "${args[@]}"; do echo -n "${ch}"; done
+    echo
+:'
+# output:
+aaabbccc
+'
+}
+
 # this example use bash-specific syntax (requiring modern bash version)
 # source:
 # https://unix.stackexchange.com/questions/132102/communication-between-multiple-processes
@@ -106,6 +117,7 @@ appendToArray() {
 
 setUp
 bashArray
+define_trivial_array
 createPlainArray
 createAssociatedArray
 checkArraySize
