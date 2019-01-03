@@ -112,12 +112,23 @@ function test_enoughArguments() {
     fi
 }
 
+test_stringRegex() {
+    local str=${1:?"missing input"}
+    [[ "${str}" =~ ^(doom|dune|kknd)$ ]]; echo $?
+}
+
 function run() {
     test_stringIsEmpty
     test_stringEqual
     test_stringContains
     test_stringIsDigit
     test_enoughArguments
+    
+    for str in duke dune zone 
+    do
+        echo -n "${str}" $( test_stringRegex "${str}" ) ","
+    done
+    echo
 }
 
 run
