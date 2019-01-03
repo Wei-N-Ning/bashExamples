@@ -34,6 +34,13 @@ function findAndReplace() {
         printf "failed!"
         exit 1
     fi
+
+    # to test if a variable has been set
+    # see: 
+    # https://stackoverflow.com/questions/46891981/what-does-argumentx-mean-in-bash
+    # https://stackoverflow.com/questions/19097745/what-does-plus-colon-mean-in-shell-script-expressions
+    assertStringEqual "x" "${idkfa+x}"
+    assertStringEqual "" "${nonono+x}"
 }
 
 function assertStringEqual() {

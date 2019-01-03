@@ -4,6 +4,10 @@ function test_stringIsEmpty() {
     if [ -z "" ]; then
         echo "-z works"
     fi
+
+    # -n: test if a string has length
+    ( test -n ""; echo $? )
+    ( test -n "asd"; echo $? )
 }
 
 function test_stringEqual() {
