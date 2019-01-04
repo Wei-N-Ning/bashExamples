@@ -12,13 +12,21 @@ setUp() {
 }
 
 define_trivial_array() {
+    # good practice: surround each element with double quote
     local args=( aaa bb )
+
+    # append a new element, good practice applies also
     args+=( ccc )
-    for ch in "${args[@]}"; do echo -n "${ch}"; done
+
+    # double quote the array expansion I should
+    for ch in ${args[@]}
+    do 
+        echo -n "(${ch})
+    done
     echo
 :'
 # output:
-aaabbccc
+(aaa)(bb)(ccc)
 '
 }
 
