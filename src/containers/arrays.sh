@@ -21,13 +21,13 @@ define_trivial_array() {
     # double quote the array expansion I should
     for ch in ${args[@]}
     do 
-        echo -n "(${ch})
+        echo -n "(${ch})"
     done
     echo
-:'
+
 # output:
-(aaa)(bb)(ccc)
-'
+# (aaa)(bb)(ccc)
+
 }
 
 # this example use bash-specific syntax (requiring modern bash version)
@@ -95,7 +95,7 @@ createAssociatedArray() {
         # acts like a set
         arr[${n}]=${pp}
     done
-    echo ${arr[*]}
+    echo "total number of files: ${#arr[*]}"
 }
 
 # array declared inside subroutine is a local array
