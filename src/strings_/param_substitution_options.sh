@@ -1,18 +1,46 @@
 #!/usr/bin/env bash
 
 # source:
+# https://www.tldp.org/LDP/abs/html/parameter-substitution.html
+
 # https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html
+
+# equivalent to python: {'a': 1}.get('b', 0)
 #${parameter:-defaultValue}	Get default shell variables value
+
+# equivalent to python: 
+# a = {'a': 1}; b = a.get('b', 0); a['b'] = b
 #${parameter:=defaultValue}	Set default shell variables value
+
+# assert 'b' in a, "error message"
 #${parameter:?"Error Message"}	Display an error message if parameter is not set
+
+# len('asd')
 #${#var}	Find the length of the string
+
+# ${PARAM+x} if PARAM is declared, the result is x
+# commonly used in this conditional:
+# [[ -z "${PARAM+x}" ]] 
+# to determine if PARAM is undeclared (returns true)
+
 #${var%pattern}	Remove from shortest rear (end) pattern
+
 #${var%%pattern}	Remove from longest rear (end) pattern
+
 #${var:num1:num2}	Substring
+
 #${var#pattern}	Remove from shortest front pattern
+
 #${var##pattern}	Remove from longest front pattern
+
 #${var/pattern/string}	Find and replace (only replace first occurrence)
+
 #${var//pattern/string}	Find and replace all occurrences
+
+check_param_declared() {
+    echo -n "${BLABLA+x}"
+    echo "${HOME+x}"
+}
 
 function assertStrEqual() {
     if [ "$1" != "$2" ]
@@ -149,6 +177,7 @@ doom3
 }
 
 function run() {
+    check_param_declared
     join
     local s=$( joins "-" {a..f} )
     assertStrEqual "a-b-c-d-e-f" ${s}
