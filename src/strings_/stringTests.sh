@@ -6,6 +6,9 @@ function test_stringIsEmpty() {
     fi
 
     # -n: test if a string has length
+    # this can be useful to validate user-provided parameters
+    # to pass the test statement, the variable must be set to a 
+    # non-empty string
     ( test -n ""; echo $? )
     ( test -n "asd"; echo $? )
 }

@@ -2,16 +2,32 @@
 
 # source:
 # https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html
+
+# equivalent to python: {'a': 1}.get('b', 0)
 #${parameter:-defaultValue}	Get default shell variables value
+
+# equivalent to python: 
+# a = {'a': 1}; b = a.get('b', 0); a['b'] = b
 #${parameter:=defaultValue}	Set default shell variables value
+
+# assert 'b' in a, "error message"
 #${parameter:?"Error Message"}	Display an error message if parameter is not set
+
+# len('asd')
 #${#var}	Find the length of the string
+
 #${var%pattern}	Remove from shortest rear (end) pattern
+
 #${var%%pattern}	Remove from longest rear (end) pattern
+
 #${var:num1:num2}	Substring
+
 #${var#pattern}	Remove from shortest front pattern
+
 #${var##pattern}	Remove from longest front pattern
+
 #${var/pattern/string}	Find and replace (only replace first occurrence)
+
 #${var//pattern/string}	Find and replace all occurrences
 
 function assertStrEqual() {
