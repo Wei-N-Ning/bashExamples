@@ -27,10 +27,15 @@ localNameReference() {
     # if the look up is successful the value of the target variable
     # is set to var
     # otherwise var is an empty string
-    local -n var="HOME"
+    local -n var="USER"
     echo "+ ${var}"
     local -n novar="BLABLA"
     echo "- ${novar}"
+
+    # this will unset environment variable USER too!
+    # beware
+    # declare -n var="USER"
+    # unset var 
 }
 
 demoPassingArgs() {
