@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # source:
+# https://www.tldp.org/LDP/abs/html/parameter-substitution.html
+
 # https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html
 
 # equivalent to python: {'a': 1}.get('b', 0)
@@ -16,6 +18,11 @@
 # len('asd')
 #${#var}	Find the length of the string
 
+# ${PARAM+x} if PARAM is declared, the result is x
+# commonly used in this conditional:
+# [[ -z "${PARAM+x}" ]] 
+# to determine if PARAM is undeclared (returns true)
+
 #${var%pattern}	Remove from shortest rear (end) pattern
 
 #${var%%pattern}	Remove from longest rear (end) pattern
@@ -29,6 +36,11 @@
 #${var/pattern/string}	Find and replace (only replace first occurrence)
 
 #${var//pattern/string}	Find and replace all occurrences
+
+check_param_declared() {
+    echo -n "${BLABLA+x}"
+    echo "${HOME+x}"
+}
 
 function assertStrEqual() {
     if [ "$1" != "$2" ]
@@ -165,6 +177,7 @@ doom3
 }
 
 function run() {
+    check_param_declared
     join
     local s=$( joins "-" {a..f} )
     assertStrEqual "a-b-c-d-e-f" ${s}

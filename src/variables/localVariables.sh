@@ -13,9 +13,25 @@ assertEqual() {
 
 # local variable a is not visible in the global scope
 demoLocalVariable() {
-    local var="a"
+    local var="HOME"
+    echo "${var}"
 }
 
+# read:
+# http://mywiki.wooledge.org/BashFAQ/048#line-120
+# this can cause problem:
+# https://stackoverflow.com/questions/33775996/circular-name-reference
+localNameReference() {
+    # evaluate the content of right-hand-side, using it to look up 
+    # another variable; 
+    # if the look up is successful the value of the target variable
+    # is set to var
+    # otherwise var is an empty string
+    local -n var="HOME"
+    echo "+ ${var}"
+    local -n novar="BLABLA"
+    echo "- ${novar}"
+}
 
 demoPassingArgs() {
     if [ -z "$1" ]; then
@@ -38,7 +54,8 @@ demoReturnValue() {
 
 run() {
     demoLocalVariable
-    
+    localNameReference
+
     demoPassingArgs "a" "b"
     
     local computed=1
