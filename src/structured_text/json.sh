@@ -35,6 +35,14 @@ get_value() {
     eval ${ASSERT_SUCCESS}
 }
 
+# using python3
+get_value3() {
+    local k=${1:?"missing key"}
+    local d=${2:-}
+    python3 -Bsc "import json,sys;s=sys.stdin.read();print(json.loads(s).get('${k}', '${d}'))" 2>/dev/null
+    eval ${ASSERT_SUCCESS}
+}
+
 main() {
     echo -n 'found: '
     pseudo_credential | get_value "outfile_excel"
@@ -43,7 +51,19 @@ main() {
     echo -n 'default: '
     pseudo_credential | get_value "thereisacow" "xxdn"
 
-    echo "asd,,," | get_value "asd"
+    ( echo "asd,,," | get_value "asd" )
+}
+
+main_python3() {
+    echo -n 'found: '
+    pseudo_credential | get_value3 "outfile_excel"
+    echo -n 'null: '
+    pseudo_credential | get_value3 "thereisacow"
+    echo -n 'default: '
+    pseudo_credential | get_value3 "thereisacow" "xxdn"
+
+    ( echo "asd,,," | get_value3 "asd" )
 }
 
 main
+main_python3
