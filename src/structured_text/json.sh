@@ -65,5 +65,11 @@ main_python3() {
     ( echo "asd,,," | get_value3 "asd" )
 }
 
+# practical example: aws sts
+# one can also use aws sts ... --query Account 
+parse_aws_sts() {
+    aws sts get-caller-identity | python -Bsc 'import sys,json;print(json.loads(sys.stdin.read()).get("Account",""))'
+}
+
 main
 main_python3
