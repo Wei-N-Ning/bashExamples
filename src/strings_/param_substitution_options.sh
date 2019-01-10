@@ -42,6 +42,14 @@ check_param_declared() {
     echo "${HOME+x}"
 }
 
+# this can be helpful to retrieve only segments of the path
+get_repl_dirpath() {
+    local thisdir="$( git rev-parse --show-toplevel )"
+
+    # remove /Users/wein from the path
+    echo "repl: ${thisdir#${HOME}}"
+}
+
 function assertStrEqual() {
     if [ "$1" != "$2" ]
     then
@@ -178,6 +186,8 @@ doom3
 
 function run() {
     check_param_declared
+    get_repl_dirpath
+
     join
     local s=$( joins "-" {a..f} )
     assertStrEqual "a-b-c-d-e-f" ${s}
