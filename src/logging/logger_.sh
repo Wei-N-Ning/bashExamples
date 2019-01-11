@@ -35,7 +35,7 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 EOF
-    gcc -o /tmp/_ /tmp/_.c
+    cc -o /tmp/_ /tmp/_.c
     /tmp/_
 }
 
