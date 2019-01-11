@@ -10,14 +10,13 @@
 # the purpose of "-"
 # how to pass arguments while using heredoc program
 
-call_python_heredoc() {
+python_heredoc_with_args() {
    python - $@ <<"EOF"
 import sys
 
 class ZenOfPython(object):
     def __init__(self):
         print('------------')
-        import this
 
 if __name__ == '__main__':
   print(sys.argv[1:])
@@ -26,4 +25,17 @@ if __name__ == '__main__':
 EOF
 }
 
-call_python_heredoc "foo" "bar"
+# read:
+# https://stackoverflow.com/questions/17097642/how-to-insert-an-inline-heredoc-maybe-python-script-into-a-bash-stdin-stdout
+# Now the script is read from /dev/fd/<filehandle>, so stdin can be used by the echo's pipe.
+python_heredoc_with_stdin() {
+  ls -l "${HOME}" | python <(cat <<"EOF"
+import sys
+print('////')
+print(sys.stdin.read())
+EOF
+)
+}
+
+python_heredoc_with_args "foo" "bar"
+python_heredoc_with_stdin
