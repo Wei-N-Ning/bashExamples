@@ -31,10 +31,36 @@ EOF
 python_heredoc_with_stdin() {
   ls -l "${HOME}" | python <(cat <<"EOF"
 import sys
-print('////')
-print(sys.stdin.read())
+for idx, line in enumerate(sys.stdin):
+  sys.stdout.write(line)
+  if idx > 5:
+    break
 EOF
 )
+
+  # this further illustrates this scenario:
+  # python <filehandle> - 
+  # the <filehandle> part is implemented as a pipe from 
+  # a subshell;
+  # the - part is taking stdin, which is fed by a heredoc
+  python <(cat <<"EOF"
+import sys
+
+class EchoApp(object):
+  @staticmethod
+  def run():
+    sys.stdout.write(sys.stdin.read())
+
+EchoApp.run()
+EOF
+) - <<"EOF"
+there is
+a cow,
+Sir. Woodhead,
+who lives with
+his 33 guards.
+EOF
+
 }
 
 python_heredoc_with_args "foo" "bar"
