@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# see the implemention of perl-like die() function in
+# logging sub project
+
 printInColor() {
     local RED='\033[0;31m'
     local NC='\033[0m' # No Color
