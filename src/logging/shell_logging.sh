@@ -22,9 +22,9 @@ print_lines() {
     local filename=${BASH_SOURCE[0]}
     perl -slane \
     '
-    my $tk = "  "; 
-    $tk = "* " if $. == $lineno; 
-    printf "%s %04d %s\n", $tk, $., $_ if $. > $lineno - $width and $. < $lineno + $width
+    next unless $. > $lineno - $width and $. < $lineno + $width;
+    my $tk = ("  ", " *")[$. == $lineno]; 
+    printf "%s %04d %s\n", $tk, $., $_;
     ' -- <${filename} -lineno=${lineno} -width=${width}
 }
 
