@@ -6,4 +6,9 @@ side_by_side_diff() {
     # it shows the difference between Darwin's /bin and GNU (Ubuntu)'s
     # /bin
     sdiff <(ls /bin | sort) <(ssh wein@192.168.0.9 "ls /bin" | sort)
+
+    # see also:
+    # diff
+    # vimdiff (:qa to quit)
+    
 }
