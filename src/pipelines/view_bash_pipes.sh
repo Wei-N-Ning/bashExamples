@@ -4,6 +4,16 @@
 # illustrated tutorial of redirection
 # https://wiki.bash-hackers.org/howto/redirection_tutorial
 
+# "duplicate file descriptor"
+# 
+# as the name suggests, it duplicates the physical file descriptor 
+# not the symbolic name (fd 1, 2, 3 etc...)
+# therefore, to duplicate the file descriptor associated with fd 1
+# and associate the dup with fd 2 is achieved by:
+# 
+# 2>&1
+#
+
 view_bash_pipes() {
 pgrep bash
 # 747
@@ -60,8 +70,26 @@ lsof +f g -ap 10433 -d 0,1,2,3
 
 }
 
+exec_err_to_file() {
+# In Bash the exec built-in replaces the shell with the specified 
+# program. So what does this have to do with redirection? exec also
+# allow us to manipulate the file descriptors. If you don't specify a 
+# program, the redirection after exec modifies the file descriptors 
+# of the current shell.
 
+# All the the errors sent to stderr by the commands after the 
+# exec 2>file will go to the file, just as if you had the command in a script and ran myscript 2>file.
 
+# recall perl's select()
 
+exec can be used, if, for instance, you want to log the errors the commands in your script produce, just add exec 2>myscript.errors at the beginning of your script.
+exec 2>/var/tmp/err
 
+echo "asd" >&2
+
+exec 2>&1
+
+echo "bsd" >&2
+cat /var/tmp/err
+}
 
