@@ -133,6 +133,26 @@ close_file_descriptors() {
     # bash: line 0: echo: write error: Bad file descriptor
 }
 
+compound_commands_pipeline() {
+# this is similar to the "extract stdout and stderr to two different
+# processes" problem, shown in stdout_stderr_to_tee.sh
 
+# HOW DOES PERL pipe stderr, stdout to different pipes?????
+# it turns out that perl uses bourne shell's redirection syntax
+# Note that you must use Bourne shell (sh(1)) redirection syntax in backticks
+# https://www.perlmonks.org/?node_id=730
 
+cmd1="dd if=/dev/urandom bs=64 count=1"
+cmd2="base64"
+cmd3="cat"
+{
+  {
+    ${cmd1} 3>&- |
+      ${cmd2} 2>&3 3>&-
+  } 2>&1 >&4 4>&- |
+    ${cmd3} 3>&- 4>&-
+} 3>&2 4>&1
+
+}
+compound_commands_pipeline
 

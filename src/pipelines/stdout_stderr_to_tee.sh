@@ -24,6 +24,8 @@ setup() {
 }
 
 demo_stdout_stderr_to_tees() {
+    echo "===================================================================="
+
     # dd will print the binary blob to a file named stdout
     # and print the statistics to another file named stderr
     { dd if=/dev/urandom bs=128 count=1 2>&3 3>&- | \
@@ -31,11 +33,47 @@ demo_stdout_stderr_to_tees() {
 }
 
 kitchen_sink() {
+    echo "===================================================================="
+    
     # dd's stdout (base64 binary blob) is insulated by kitchen sink
     { dd if=/dev/urandom bs=64 count=1 | \
         base64 | tee ${TEMPDIR}/stdout >/dev/null; } 2>&1 | \
         tee ${TEMPDIR}/stderr
     cat ${TEMPDIR}/stdout
+}
+
+compute() {
+    perl -E \
+    '
+    # unbuffered IO may better demo the pipe 
+    $| = 1;
+    for (1..10) {
+        sleep 2;
+        say STDOUT "there^is^a^cow";
+        say STDERR "THERE-IS-A-COW";
+    }
+    '
+}
+
+bash_specific_form() {
+    # this only works in bash, taking advantage of the its subshell syntax
+    compute 1> >(cat >/var/tmp/stdout) 2> >(cat >/var/tmp/stderr)
+
+    # to observe the output
+    # tail -f /var/tmp/stdout 
+    
+}
+
+simple_form() {
+    # mentioned in https://wiki.bash-hackers.org/howto/redirection_tutorial
+    # to this post:
+    # https://groups.google.com/forum/#!topic/comp.unix.shell/ZCBtFUiUpO8
+    # which provides a simpler form to this recipe: 
+    
+    { compute | cat >/var/tmp/stdout; } 2>&1 | cat >/var/tmp/stderr
+
+    # to observe the output
+    # tail -f /var/tmp/stdout 
 }
 
 setup
