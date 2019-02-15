@@ -142,17 +142,25 @@ compound_commands_pipeline() {
 # Note that you must use Bourne shell (sh(1)) redirection syntax in backticks
 # https://www.perlmonks.org/?node_id=730
 
+# for partical reason, 
+# see stdout_stderr_to_tee: simple_form()
+# or bash_specific_form()
+
 cmd1="dd if=/dev/urandom bs=64 count=1"
 cmd2="base64"
 cmd3="cat"
 {
   {
     ${cmd1} 3>&- |
+      # fd1 
       ${cmd2} 2>&3 3>&-
-  } 2>&1 >&4 4>&- |
+      # fd1 handled
+      # fd2  
+  } 2>&1 1>&4 4>&- |
+    # swap fd2 and fd1
     ${cmd3} 3>&- 4>&-
+    # fd2 handled
 } 3>&2 4>&1
-
 }
 compound_commands_pipeline
 
