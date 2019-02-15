@@ -79,10 +79,12 @@ exec_err_to_file() {
 
 # All the the errors sent to stderr by the commands after the 
 # exec 2>file will go to the file, just as if you had the command in a script and ran myscript 2>file.
+# exec can be used, if, for instance, you want to log the errors the
+#  commands in your script produce, just add exec 2>myscript.errors at 
+# the beginning of your script.
 
 # recall perl's select()
 
-exec can be used, if, for instance, you want to log the errors the commands in your script produce, just add exec 2>myscript.errors at the beginning of your script.
 exec 2>/var/tmp/err
 
 echo "asd" >&2
@@ -92,4 +94,45 @@ exec 2>&1
 echo "bsd" >&2
 cat /var/tmp/err
 }
+
+exec_two_input_files() {
+# and our read inherits these descriptors, and our command (read -p "Press any key" -n 1)
+#  inherits them, and thus reads from file and not from our terminal.
+
+# A quick look at help read tells us that we can specify a file descriptor from which read
+#  should read. Cool. Now let's use exec to get another descriptor:
+
+# bash    11388 wein    0u   CHR    R,W;SH   16,2  0t65458     701 /dev/ttys002
+# bash    11388 wein    1u   CHR    R,W;SH   16,2  0t65458     701 /dev/ttys002
+# bash    11388 wein    2u   CHR    R,W;SH   16,2  0t65458     701 /dev/ttys002
+# bash    11388 wein    3r   REG         R    1,4      275 9249335 /private/var/tmp/text
+# 
+# notice fd 3 acts as another input file descriptor associated with the text file
+# the inner read now works because fd 0 (the default fd read talks to) is not 
+# occupied by the text-reading job 
+
+w >/var/tmp/text
+exec 3</var/tmp/text
+while read -u 3 line;do 
+    echo "$line"
+    read -p "Press any key" -n 1
+done
+}
+
+close_file_descriptors() {
+    # Though the OS will probably clean up the mess, it is perhaps a good idea to 
+    # close the file descriptors you open. For instance, if you open a file descriptor 
+    # with exec 3>file, all the commands afterwards will inherit it.
+    
+    bash -c '{ lsof -a -p $$ -d0,1,2 ;} <&- 2>&-'
+    # COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+    # bash    11555 wein    1u   CHR   16,2  0t66991  701 /dev/ttys002
+
+    # talk to closed file descriptor will cause an error
+    bash -c '{ echo asd ;} <&- 1>&-'
+    # bash: line 0: echo: write error: Bad file descriptor
+}
+
+
+
 
