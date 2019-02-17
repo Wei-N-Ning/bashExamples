@@ -44,6 +44,24 @@ lsof +f g -ap 10386 -d 0,1,2
 
 }
 
+read_herestring() {
+    (sleep 50; cat;) 3<<<"asd" &
+# bash    94205 weining    0u   CHR    R,W;SH   16,4  0t1796925    1161 /dev/ttys004
+# bash    94205 weining    1u   CHR    R,W;SH   16,4  0t1796925    1161 /dev/ttys004
+# bash    94205 weining    2u   CHR    R,W;SH   16,4  0t1796925    1161 /dev/ttys004
+# bash    94205 weining    3r   REG      R;SH    1,6          4 5129084 /private/var/folders/07/m0nlbwvx1_vgx89ccx9mmmz00000gn/T/sh-thd.5eJknh
+
+    # notice how herestring is saved to a temporary directory then 
+    # opened as a normal file handle
+
+    # this is to support the theory that herestring is preferrable to 
+    # subshell pipe, i.e.
+    
+    # use: cat <<<"asd" 
+    # rather than: echo "asd" | cat 
+    # or cat <(echo "asd")
+}
+
 open_new_descriptor() {
 # write
 (sleep 60; echo "asd";) 3>/var/tmp/out &
