@@ -3,7 +3,7 @@
 # see the implemention of perl-like die() function in
 # logging sub project
 
-printInColor() {
+print_in_read() {
     local RED='\033[0;31m'
     local NC='\033[0m' # No Color
     printf "${RED}${1}${NC}\n"
@@ -72,7 +72,7 @@ print_location_old() {
 # $2: line number $LINENO
 # $3: optional message
 throw_assert_error() {
-    printInColor "ASSERT_ERROR: ${3}" && print_location ${2}
+    print_in_read "ASSERT_ERROR: ${3}" && print_location ${2}
     exit 1
 }
 
