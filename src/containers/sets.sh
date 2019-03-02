@@ -21,6 +21,34 @@ size() {
     echo ${#arr[*]}
 }
 
+# borrow Python's set operator - 
+# given two sets: A, B
+# minus A B returns 
+# set A with all the common elements removed
+minus() {
+    # source:
+    # https://www.linuxjournal.com/content/bash-associative-arrays
+    declare -A setB
+    for elem in ${2:?"missing setB"}
+    do
+        setB[${elem}]=${elem}
+    done
+    perl -lane '/\S+/ && print join(" ", @F)' <(
+        for elem in ${1:?"missing setA"}
+        do
+            [[ "${setB[${elem}]}" == "" ]] && echo -n "${elem} "
+        done
+    )
+}
+
+# borrow Python's set operator +
+# given two sets: A, B
+# plus A B returns
+# the union of A and B
+plus() {
+    perl -lane 'BEGIN {my %l}; map {$l{$_}=$_} @F; END {print join(" ", keys(%l))}' <<<"${1} ${2}"
+}
+
 runTests() {
     echo $( size )
     add 0
@@ -36,8 +64,11 @@ runTests() {
     do
         echo -n "${elem}, "
     done
-
-    return 0
+    echo 
 }
 
 runTests
+echo "{A} - {B}"
+minus ":set there is a cow" "there is a doll's house"
+echo "{A} + {B}"
+plus ":set there is a cow" "there is a doll's house"

@@ -11,6 +11,25 @@ setUp() {
     mkdir /tmp/sut
 }
 
+define_trivial_array() {
+    # good practice: surround each element with double quote
+    local args=( aaa bb )
+
+    # append a new element, good practice applies also
+    args+=( ccc )
+
+    # double quote the array expansion I should
+    for ch in ${args[@]}
+    do 
+        echo -n "(${ch})"
+    done
+    echo
+
+# output:
+# (aaa)(bb)(ccc)
+
+}
+
 # this example use bash-specific syntax (requiring modern bash version)
 # source:
 # https://unix.stackexchange.com/questions/132102/communication-between-multiple-processes
@@ -76,7 +95,7 @@ createAssociatedArray() {
         # acts like a set
         arr[${n}]=${pp}
     done
-    echo ${arr[*]}
+    echo "total number of files: ${#arr[*]}"
 }
 
 # array declared inside subroutine is a local array
@@ -106,6 +125,7 @@ appendToArray() {
 
 setUp
 bashArray
+define_trivial_array
 createPlainArray
 createAssociatedArray
 checkArraySize

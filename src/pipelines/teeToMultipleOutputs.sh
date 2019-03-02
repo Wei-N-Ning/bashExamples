@@ -41,13 +41,17 @@ function run() {
     local result=$(
         python /tmp/_.py |
         tee \
-            >(ts > /tmp/log.txt) \
-            >(ts > /tmp/another.txt) | 
+            >(cat > /tmp/log.txt) \
+            >(cat > /tmp/another.txt) | 
         wc -l
     )
     assertEqual 30 $result
     assertFile /tmp/log.txt
     assertEqual 30 $(wc -l /tmp/log.txt)
+    
+    diff /tmp/log.txt /tmp/another.txt
+    wc -l /tmp/log.txt
+    wc -l /tmp/another.txt
 }
 
 run

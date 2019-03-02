@@ -4,6 +4,13 @@ function test_stringIsEmpty() {
     if [ -z "" ]; then
         echo "-z works"
     fi
+
+    # -n: test if a string has length
+    # this can be useful to validate user-provided parameters
+    # to pass the test statement, the variable must be set to a 
+    # non-empty string
+    ( test -n ""; echo $? )
+    ( test -n "asd"; echo $? )
 }
 
 function test_stringEqual() {
@@ -108,12 +115,23 @@ function test_enoughArguments() {
     fi
 }
 
+test_stringRegex() {
+    local str=${1:?"missing input"}
+    [[ "${str}" =~ ^(doom|dune|kknd)$ ]]; echo $?
+}
+
 function run() {
     test_stringIsEmpty
     test_stringEqual
     test_stringContains
     test_stringIsDigit
     test_enoughArguments
+    
+    for str in duke dune zone 
+    do
+        echo -n "${str}" $( test_stringRegex "${str}" ) ","
+    done
+    echo
 }
 
 run

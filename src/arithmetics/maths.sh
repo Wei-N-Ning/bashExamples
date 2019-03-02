@@ -14,3 +14,7 @@ if [[ $( multiply 0 2 ) == "0" ]]
 then
   echo "lol"
 fi
+
+# print seconds
+echo $(( SECONDS + 5 * 60))
+
