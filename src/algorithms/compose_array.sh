@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 gen_list() {
     local ids=(
 477020
@@ -403,7 +404,7 @@ gen_list() {
 93418
 93417
 93373 )
-    for each_id in ${ids[@]}
+    for each_id in "${ids[@]}"
     do
         echo "https://hackerone.com/reports/${each_id}" 
     done
