@@ -12,3 +12,16 @@ gen_list() {
 }
 
 gen_list >/tmp/ticket_list.txt
+
+
+perl -E '
+my @ids = qw(
+    477020
+    463925
+    93417
+    93373 
+);
+foreach(@ids) {
+    say;
+}
+'
