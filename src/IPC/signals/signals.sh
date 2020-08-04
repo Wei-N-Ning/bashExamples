@@ -7,18 +7,19 @@
 # networkFoo/csockets/tests//chapter1
 # howToVerify.sh
 
+# the signal handler receives the following args:
+# (10, <frame at 0x7f4ca92fa800, file '<string>', line 8, code <module>>)
+# {}
+
 function runReceiver() {
     python -c "from __future__ import print_function
-import signal, time
-class State(object):
-    to_exit = False
-    @classmethod
-    def set(cls, *args, **kwargs):
-        cls.to_exit = True
-signal.signal(signal.SIGUSR1, State.set)
-while not State.to_exit:
+import signal, time, sys
+def at_user_signal(*args, **kwargs):
+    print('user signal caught\n{}\n{}'.format(args, kwargs))
+    sys.exit(0)
+signal.signal(signal.SIGUSR1, at_user_signal)
+while True:
     time.sleep(0.5)
-print('DOOOOM')
 " &
 }
 
@@ -30,7 +31,7 @@ function runSender() {
 
 runReceiver
 pid_=${!}
-sleep 0.1
+sleep 0.2
 runSender ${pid_}
 wait
 

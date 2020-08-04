@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 # posts:
 # https://unix.stackexchange.com/questions/182537/write-python-stdout-to-file-immediately
 # https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file

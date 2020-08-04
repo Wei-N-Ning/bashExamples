@@ -13,7 +13,7 @@ function _init() {
 function demoPythonWaitForBash() {
     _free
     _init
-    python -c "f=open('$_fifo');print f.read();f.close()" &
+    python -c "with open('$_fifo') as f:  print('received:', f.read())" &
     echo "beef" > $_fifo
 }
 
@@ -21,7 +21,7 @@ function demoBashWaitForPython() {
     _free
     _init
     tail $_fifo &
-    python -c "f=open('$_fifo', 'w');f.write('dead');f.close()"
+    python -c "with open('$_fifo', 'w') as f:  f.write('send to tail')"
 }
 
 function run() {

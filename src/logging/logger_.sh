@@ -11,10 +11,12 @@ setUp() {
 }
 
 callShLogger() {
-    logger -i -t "myapp" "thereisnospoon"
+    timestamp=$(date +'%m/%d/%Y/%H/%M/%S')
+    logger -i -t "myapp" "thereisnospoon ${timestamp}"
 }
 
 callCProgram() {
+    timestamp=$(date +'%m/%d/%Y/%H/%M/%S')
     cat > /tmp/_.c <<EOF
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,7 +31,7 @@ void init_log()
 int main(void) {
 
     init_log();
-    syslog(LOG_NOTICE, "Session started!!");
+    syslog(LOG_NOTICE, "Session started!! ${timestamp}");
     closelog();
 
     return EXIT_SUCCESS;
@@ -40,7 +42,7 @@ EOF
 }
 
 viewLogs() {
-    tail -n 2 /var/log/syslog
+    tail -n 10 /var/log/syslog
 }
 
 

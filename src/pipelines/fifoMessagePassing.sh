@@ -14,16 +14,17 @@ function messageServer() {
     /usr/bin/env python -c "
 import time
 f = open('/tmp/test.pipe', 'r')
-print 'server is connected to pipe'
+print('server is connected to pipe')
 dead = False
+num_lines = 0
 while not dead:
     for m in f.read().split('\n'):
         if m == 'dead':
             dead = True
             break
-        print m
+        num_lines += 1
     time.sleep(0.25)
-print 'server is dead'
+print('line count: {}, server is down'.format(num_lines))
 " &
 }
 
