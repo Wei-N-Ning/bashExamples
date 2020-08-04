@@ -11,9 +11,9 @@ function createExec() {
     local timeSleeping=${2:-0.05}
     echo "
 import time
-for i in xrange(${workload}):
+for i in range(${workload}):
     time.sleep(${timeSleeping})
-    print '/asd/asd/t/ea/ad'
+    print('/asd/asd/t/ea/ad')
 " > /tmp/_.py
 }
 

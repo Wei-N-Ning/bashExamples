@@ -28,6 +28,12 @@ demo_stdout_stderr_to_tees() {
 
     # dd will print the binary blob to a file named stdout
     # and print the statistics to another file named stderr
+    # /////////////////////////////////////////////////////////
+    # NOTE: read this from the outter {} to the inner {}
+    # 3>&1 1>&2 gets processed first
+    # 2>&3 3>&- gets processed afterwards
+    # ////////////////////////////////////////////////////////
+    # 
     { dd if=/dev/urandom bs=128 count=1 2>&3 3>&- | \
         base64 | tee ${TEMPDIR}/stdout; } 3>&1 1>&2 | tee ${TEMPDIR}/stderr
 }
@@ -62,6 +68,15 @@ bash_specific_form() {
     # to observe the output
     # tail -f /var/tmp/stdout 
     
+    # NOTE: compare these two commands:
+    dd if=/dev/zero bs=128 count=1 1> >(perl -wnl -E 'say "stdout: " . $_') 2> >(perl -wnl -E 'say "stderr: " . $_')
+    # stdout: stderr: 1+0 records in
+    # stdout: stderr: 1+0 records out
+    # stdout: stderr: 128 bytes copied, 1.1512e-05 s, 11.1 MB/s
+    dd if=/dev/zero bs=128 count=1 1> >(perl -wnl -E 'say "stdout"') 2> >(perl -wnl -E 'say "stderr: " . $_')
+    # stdout
+    # stdout
+    # stdout
 }
 
 simple_form() {
