@@ -34,7 +34,7 @@ function importPythonModule {
 
 
 function verifyPythonPath {
-    if [ ! -z "$PYTHONPATH"]; then
+    if [[ -n "${PYTHONPATH}" ]]; then
         echo "failed"
         exit 1
     fi

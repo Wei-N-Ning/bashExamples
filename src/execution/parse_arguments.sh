@@ -12,23 +12,22 @@ parse_all() {
     case "${option}" in
       d)
         value="${OPTARG}-DDD ${option}"
+        echo "${value}" && exit
         ;;
       f)
         value="${OPTARG}-FFF ${option}"
+        echo "${value}" && exit
         ;;
       \?)
         error "unknown option: -${OPTARG}"
+        exit 1
         ;;
       :)
         error "-${OPTARG} requires an argument"
+        exit 1
         ;;
     esac
-    echo "${value}"
   done
 }
 
-main() {
-  parse_all -f dev plan
-}
-
-main
+parse_all $@
