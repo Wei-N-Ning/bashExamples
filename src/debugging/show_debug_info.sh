@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
 # source
+# https://github.com/trimstray/test-your-sysadmin-skills#simple-questions
+bash --login -x
+# -l/--login: Make bash act as if it had been invoked as a login
+#  shell (see INVOCATION below)
+# A login shell is one whose first character of argument zero 
+# is a -, or one started with the --login option.
+
+# source
 # http://www.skybert.net/bash/debugging-bash-scripts-on-the-command-line/
 
 enable_debug_mode() {
