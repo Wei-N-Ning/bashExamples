@@ -13,7 +13,13 @@
 # & - this will make the process as a background process, so that the child processes will not get killed even though the parent gets auto-killed
 # : - final : will execute the function again and hence the chain reaction begins
 
+
+
+# Notes:
 # reminds me `jmp -1` 
+# don't try it on laptop or production server - it will bring
+# down the system in seconds.
+
 
 # The best way to protect a multi-user system is to use PAM to
 # limit the number of processes a user can use. We know the 
